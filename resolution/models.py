@@ -10,4 +10,8 @@ class YourResolutions(models.Model):
 
 class notes(models.Model):
     yourresolution = models.ForeignKey(YourResolutions, on_delete=models.CASCADE)
-    note_title = models.CharField(max_length=1000)
+    note_title = models.CharField(max_length=500)
+    note_content = models.CharField(max_length=5000)
+
+    def __str__(self):
+        return self.note_title
