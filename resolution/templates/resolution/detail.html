@@ -1,1 +1,10 @@
-<h1>Currently working on it</h1>
+<h1>{{ note.resolution_title }}</h1>
+<h2> {{ note.resolution_category }} </h2>
+
+
+
+<ul>
+  {% for res in note.notes_set.all %}
+        <li>{{ res.note_title }} - {{ res.note_content }}</li>
+  {% endfor %}
+</ul>
