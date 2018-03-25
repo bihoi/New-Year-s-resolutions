@@ -1,7 +1,6 @@
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'resolution/style.css' %}" />
+{% extends 'resolution/base.html' %}
 
-
+{% block body %}
 {% if all_results %}
 <h3>Here are all your resolutions for this year</h3>
 <ul>
@@ -13,3 +12,4 @@
 {% else %}
   <h3>No results to be displayed</h3>
 {% endif %}
+{% endblock %}
