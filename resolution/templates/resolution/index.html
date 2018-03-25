@@ -1,10 +1,10 @@
 {% extends 'resolution/base.html' %}
 
 {% block body %}
-{% if all_results %}
+{% if object_list %}
 <h3>Here are all your resolutions for this year</h3>
 <ul>
-  {% for result in all_results %}
+  {% for result in object_list %}
   <li><a href="{% url 'resolution:detail' result.id %}">{{result.resolution_title}}</a></li>
   {% endfor %}
 </ul>

@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'resolution/style.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
 
 <nav class="navbar navbar-default">
@@ -8,8 +8,9 @@
 
         <!-- LOGO -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'resolution:index' %}"><img src='{% static "resolution/images/livesmartLogo.png" %}'/></a>
+            <a id="logo" class="navbar-brand" href="{% url 'resolution:index' %}"><img src='{% static "resolution/images/livesmartLogo.png" %}'/></a>
             <a class="navbar-brand" href="{% url 'resolution:index' %}">Home</a>
+            <a class="navbar-brand" href="{% url 'resolution:resolution-add' %}">Add resolution</a>
 
         </div>
 

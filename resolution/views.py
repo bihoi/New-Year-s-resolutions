@@ -1,15 +1,21 @@
+from django.views import generic
 from .models import YourResolutions
-from django.shortcuts import render, get_object_or_404
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 
-def index(request):
-    all_results = YourResolutions.objects.all()
-    context = {
-        'all_results': all_results,
-    }
+class IndexView(generic.ListView):
+    template_name = 'resolution/index.html'
 
-    return render(request, 'resolution/index.html', context)
+    def get_queryset(self):
+        return YourResolutions.objects.all()
 
-def detail(request, note_id):
-    note = get_object_or_404(YourResolutions, pk=note_id)
-    return render(request, 'resolution/detail.html', {'note':note})
+
+class DetailView(generic.DetailView):
+    model = YourResolutions
+    template_name = 'resolution/detail.html'
+
+
+
+class ResolutionCreate(CreateView):
+    model = YourResolutions
+    fields = ['resolution_title', 'resolution_category', 'resolution_year']

@@ -1,12 +1,11 @@
-body{
-
-background-color:#8eb9ff;
-
-}
 
 .logo{
   background: white url('images/logo.png');
 }
 
-.navbar-header{border-bottom: 2px solid white;}
-.navbar-header a{font-size: 30px; margin-right: 10px}
+
+.container-fluid {
+    height: 10%;
+}
+
+#logo{margin-right: 50px;}

@@ -7,7 +7,7 @@
 
 
 <ul>
-  {% for res in note.notes_set.all %}
+  {% for res in yourresolutions.notes_set.all %}
         <li>{{ res.note_title }} - {{ res.note_content }}</li>
   {% endfor %}
 </ul>
