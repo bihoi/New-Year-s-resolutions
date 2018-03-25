@@ -2,7 +2,7 @@
 <h3>Here are all your resolutions for this year</h3>
 <ul>
   {% for result in all_results %}
-  <li><a href="/resolution/{{result.id}}/">{{result.health}}</a></li>
+  <li><a href="/resolution/{{result.id}}/">{{result.resolution_title}}</a></li>
   {% endfor %}
 </ul>
 
