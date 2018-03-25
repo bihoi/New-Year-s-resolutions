@@ -6,9 +6,9 @@
 
 
 
-<ul>
+<ul class="list-group">
   {% for res in yourresolutions.notes_set.all %}
-        <li>{{ res.note_title }} - {{ res.note_content }}</li>
+        <li class="list-group-item">{{ res.note_title }} - {{ res.note_content }}</li>
   {% endfor %}
 </ul>
 {% endblock %}

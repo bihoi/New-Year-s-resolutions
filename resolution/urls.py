@@ -7,6 +7,12 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('<pk>/', views.DetailView.as_view(), name="detail"),
 
-    # add resolution
+    # add resolution -  /resolution/resolution/add/
     path('resolution/add/$', views.ResolutionCreate.as_view(), name='resolution-add'),
+
+    # edit resolutions - /resolution/resolution/2/
+    path('resolution/<pk>/$', views.ResolutionUpdate.as_view(), name='resolution-update'),
+
+    # delete resolution - /resolution/resolution/2/delete
+    path('resolution/<pk>/delete/$', views.ResolutionDelete.as_view(), name='resolution-delete'),
 ]

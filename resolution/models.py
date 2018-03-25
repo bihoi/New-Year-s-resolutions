@@ -8,7 +8,7 @@ class YourResolutions(models.Model):
     resolution_year = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return reverse('resolution:detail', kwargs={'pk': self.pk})
+        return reverse('resolution:index')
 
     def __str__(self):
         return self.resolution_title + ' - ' + self.resolution_category +' - '+ self.resolution_year
