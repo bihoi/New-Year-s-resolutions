@@ -5,6 +5,11 @@ app_name = 'resolution'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+
+    #user registration
+    path('register/', views.UserFormView.as_view(), name='register'),
+
+
     path('<pk>/', views.DetailView.as_view(), name="detail"),
 
     # add resolution -  /resolution/resolution/add/
